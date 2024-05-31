@@ -42,6 +42,7 @@ const MyChats = () => {
           <AiOutlinePlus className="plus__icon" />
         </div>
       </div>
+      <hr/>
       <div className="allusers">
         {myChats.map((ele) => {
           return (

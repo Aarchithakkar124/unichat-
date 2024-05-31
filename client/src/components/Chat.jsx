@@ -7,6 +7,7 @@ import fetchData from "../helper/apiCall";
 import { AiFillSetting } from "react-icons/ai";
 import GroupChatModal from "./GroupChatModal";
 import io from "socket.io-client";
+import loginImage from '../images/login.jpg';
 
 const Chat = () => {
   const { currentChat, loading, setLoading } = useContext(AppContext);

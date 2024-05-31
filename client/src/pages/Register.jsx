@@ -3,6 +3,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import "../styles/register.css";
 import axios from "axios";
 import toast from "react-hot-toast";
+import loginImage from '../images/login.jpg';
 
 axios.defaults.baseURL = process.env.REACT_APP_SERVER_DOMAIN;
 
@@ -84,51 +85,71 @@ function Register() {
   return (
     <section className="register-section flex-center">
       <div className="register-container flex-center">
+        <img src={loginImage} alt="Login" className="login-image" />
         <h2 className="form-heading">Sign Up</h2>
         <form
           onSubmit={formSubmit}
           className="register-form"
         >
-          <input
-            type="text"
-            name="name"
-            className="form-input"
-            placeholder="Enter your name"
-            value={formDetails.name}
-            onChange={inputChange}
-          />
-          <input
-            type="email"
-            name="email"
-            className="form-input"
-            placeholder="Enter your email"
-            value={formDetails.email}
-            onChange={inputChange}
-          />
-          <input
-            type="file"
-            name="pic"
-            className="form-input"
-            onChange={(e) => {
-              onUpload(e.target.files[0]);
-            }}
-          />
-          <input
-            type="password"
-            name="password"
-            className="form-input"
-            placeholder="Enter your password"
-            value={formDetails.password}
-            onChange={inputChange}
-          />
-          <input
-            type="password"
-            name="confpassword"
-            className="form-input"
-            placeholder="Confirm your password"
-            value={formDetails.confpassword}
-            onChange={inputChange}
-          />
+          <div class="form-tile">
+            <label class="form-label">Name:</label>
+            <input
+              type="text"
+              name="name"
+              class="form-input"
+              placeholder="Enter your name"
+              value={formDetails.name}
+              onChange={inputChange}
+            />
+          </div>
+
+          <div class="form-tile">
+            <label class="form-label">Email:</label>
+            <input
+              type="email"
+              name="email"
+              class="form-input"
+              placeholder="Enter your email"
+              value={formDetails.email}
+              onChange={inputChange}
+            />
+          </div>
+
+          <div class="form-tile">
+            <label class="form-label">Profile:</label>
+            <input
+              type="file"
+              name="pic"
+              class="form-input"
+              onChange={(e) => {
+                onUpload(e.target.files[0]);
+              }}
+            />
+          </div>
+
+          <div class="form-tile">
+            <label class="form-label">Password:</label>
+            <input
+              type="password"
+              name="password"
+              class="form-input"
+              placeholder="Enter your password"
+              value={formDetails.password}
+              onChange={inputChange}
+            />
+          </div>
+
+          <div class="form-tile">
+            <label class="form-label">Confirm Password:</label>
+            <input
+              type="password"
+              name="confpassword"
+              class="form-input"
+              placeholder="Confirm your password"
+              value={formDetails.confpassword}
+              onChange={inputChange}
+            />
+          </div>          
           <button
             type="submit"
             className="btn form-btn"

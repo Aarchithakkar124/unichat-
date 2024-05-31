@@ -43,8 +43,9 @@ const Navbar = () => {
         }
         alt="profile-pic"
       />
-      <span className="profile__name">{userInfo.name}</span>
-      <span className="profile__email">{userInfo.email}</span>
+      <label>Name: <span className="profile__name">{userInfo.name}</span></label>
+      <label>Email: <span className="profile__email">{userInfo.email}</span></label>
+      
     </div>
   );
 
@@ -83,7 +84,7 @@ const Navbar = () => {
         <input
           type="text"
           placeholder="Search User"
-          className="form-input search-input"
+          className="search-input"
           value={search}
           onChange={(e) => {
             setSearch(e.target.value);

@@ -3,6 +3,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import "../styles/register.css";
 import axios from "axios";
 import toast from "react-hot-toast";
+import loginImage from '../images/login.jpg';
 
 axios.defaults.baseURL = process.env.REACT_APP_SERVER_DOMAIN;
 
@@ -52,25 +53,34 @@ function Login() {
 
   return (
     <section className="register-section flex-center">
-      <div className="register-container flex-center">
+      <div className="login-container flex-center">
+      <img src={loginImage} alt="Login" className="login-image" />
         <h2 className="form-heading">Unichat</h2>
         <form onSubmit={formSubmit} className="register-form">
+        <div class="form-tile">
+          <label  class="form-label">Email:</label>
           <input
             type="email"
             name="email"
-            className="form-input"
+            class="form-input"
             placeholder="Enter your email"
             value={formDetails.email}
             onChange={inputChange}
           />
+        </div>
+
+        <div class="form-tile">
+          <label  class="form-label">Password:</label>
           <input
             type="password"
             name="password"
-            className="form-input"
+            class="form-input"
             placeholder="Enter your password"
             value={formDetails.password}
             onChange={inputChange}
           />
+        </div>
+
           <button type="submit" className="btn form-btn">
             sign in
           </button>
