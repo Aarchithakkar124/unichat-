@@ -8,10 +8,12 @@
   padding: 0.5rem 1rem;
   color: var(--secondary-color);
   cursor: pointer;
+  border: 0.5px solid black;
 }
 
 .usercard:hover {
-  background-color: var(--light-blue-color);
+  background-color: #64b5f8;
+  border: 2px solid black;
 }
 
 .selected-card {

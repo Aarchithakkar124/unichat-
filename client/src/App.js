@@ -7,8 +7,8 @@ import {
 } from "react-router-dom";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import { Toaster } from "react-hot-toast";
 import Chats from "./pages/Chats";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   const Protected = ({ children }) => {
@@ -27,14 +27,17 @@ function App() {
     <Router>
       <Toaster />
       <Routes>
+      
         <Route
           path="/"
           element={<Login />}
         />
+
         <Route
           path="/register"
           element={<Register />}
         />
+
         <Route
           path="/chats"
           element={
@@ -43,6 +46,7 @@ function App() {
             </Protected>
           }
         />
+
       </Routes>
     </Router>
   );

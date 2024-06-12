@@ -10,6 +10,8 @@
 .react-input-emoji--input {
   font-size: 1rem !important;
   font-family: var(--font-family) !important;
+  border: 2px solid black;
+  border-radius: 16px;
 }
 
 .chat__btn {

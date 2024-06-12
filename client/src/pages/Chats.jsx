@@ -1,4 +1,4 @@
-import Chat from '../components/Chat'
+import Chat from '../components/ChatSection'
 import MyChats from '../components/MyChats'
 import '../styles/chats.css'
 import React from 'react'

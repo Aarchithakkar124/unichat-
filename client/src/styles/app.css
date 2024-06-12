@@ -2,12 +2,14 @@
 
 :root {
   --primary-color: #9146ff;
+  --primary-color: #5865f2;
   --secondary-color: #f0f0ff;
   --black-color: #23272a;
-  --tertiary-color: #5865f2;
+  --white-color: #eef7fe;
+  --tertiary-color: #64b5f8;
   --font-family: "Nunito", sans-serif;
   --dark-blue-color: #131324;
-  --light-bg-color: #ffffff34;
+  --light-bg-color: #a7d3f6;
   --light-blue-color: #9a86f3;
 }
 
@@ -19,8 +21,9 @@
 
 body {
   font-family: var(--font-family);
-  background-color: var(--dark-blue-color);
-  color: var(--secondary-color);
+  /* background-color: var(--dark-blue-color); */
+  /* color: var(--secondary-color); */
+  color:black;
 }
 
 li {
@@ -53,6 +56,7 @@ a {
 
 .btn:hover {
   background-color: var(--tertiary-color);
+  border:2px solid black;
 }
 
 .loading {
